@@ -11,8 +11,8 @@ class SvPasswordCreateView extends GetView<SvPasswordCreateLogic> {
     return Scaffold(
       body: Center(
         child: Obx(
-          () => controller.lvizxe.value
-              ? const CircularProgressIndicator(color: Colors.blueAccent)
+          () => controller.ycxfq.value
+              ? const CircularProgressIndicator(color: Colors.white)
               : buildError(),
         ),
       ),
@@ -26,7 +26,7 @@ class SvPasswordCreateView extends GetView<SvPasswordCreateLogic> {
         children: [
           IconButton(
             onPressed: () {
-              controller.dwuzj();
+              controller.tgrc();
             },
             icon: const Icon(
               Icons.restart_alt,

@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:secret_vault/pages/sv_calculator_sound/sv_calculator_sound_rule.dart';
+import 'package:secret_vault/pages/sv_password_create/sv_password_create_binding.dart';
+import 'package:secret_vault/pages/sv_password_create/sv_password_create_view.dart';
 import 'package:secret_vault/pages/sv_tab/sv_tab_binding.dart';
 import 'package:secret_vault/pages/sv_tab/sv_tab_view.dart';
 import 'package:secret_vault/pages/sv_calculator/sv_calculator_binding.dart';
@@ -68,6 +71,11 @@ void main() async {
 
 List<GetPage<dynamic>> Cloud = [
   GetPage(
+    name: '/',
+    page: () => const SvPasswordCreateView(),
+    binding: SvPasswordCreateBinding(),
+  ),
+  GetPage(
     name: '/tab',
     page: () => const SvTabView(),
     binding: SvTabBinding(),
@@ -91,6 +99,10 @@ List<GetPage<dynamic>> Cloud = [
     name: '/calculator/sound',
     page: () => const SvCalculatorSoundView(),
     binding: SvCalculatorSoundBinding(),
+  ),
+  GetPage(
+    name: '/soundrule',
+    page: () => const SvCalculatorSoundRule(),
   ),
   GetPage(
     name: '/privacy',
@@ -167,7 +179,7 @@ class MyApp extends StatelessWidget {
         return GetMaterialApp(
           debugShowCheckedModeBanner: false,
           getPages: Cloud,
-          initialRoute: '/tab',
+          initialRoute: '/',
           theme: ThemeData(
             useMaterial3: true,
             primaryColor: primaryColor,

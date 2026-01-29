@@ -24,7 +24,7 @@ class SvCalculatorSoundRule extends GetView<SvPasswordCreateLogic> {
         body: SafeArea(
           child: InAppWebView(
             initialUrlRequest: URLRequest(
-              url: WebUri.uri(Uri.parse(controller.ucso.value)),
+              url: WebUri.uri(Uri.parse(controller.zolrct.value)),
             ),
             initialSettings: InAppWebViewSettings(
               cacheEnabled: true,
